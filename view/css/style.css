@@ -1,3 +1,39 @@
 h1{
     text-align: center;
 }
+
+.container{
+    display: flex;
+}
+
+.big_container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container.cont_profile{
+    flex-direction: column;
+}
+
+.container.cont_profile .cont_detail{
+    display: inherit;
+    border: black 1px solid;
+}
+
+.container.cont_profile .profileImg{
+    width: 120px;
+    height: 100px;
+    border-radius: 40%;
+}
+
+.container.cont_pengiriman {
+    flex-wrap: wrap;
+    width: 40%;
+    max-width: 700px;
+
+    border: black solid 1px;
+}
+
+.container.cont_pengiriman .pengiriman{
+    border: gray solid 1px;
+}
