@@ -1,8 +1,10 @@
 <!-- halaman pertama. (diarahkan index) -->
-<?php include('view/header.php') ?>
 <h1>Sign Up</h1>
 <hr>
 
+<div class="container">
+
+</div>
 <form action="" method="post">
     <label for="">Name:</label>
     <input type="text" name="name">
@@ -21,7 +23,3 @@
     
 </form>
 <a href="view/login_page.php">Already have an account?</a>
-
-
-
-<?php include('view/footer.php') ?>

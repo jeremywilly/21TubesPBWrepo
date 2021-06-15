@@ -1,4 +1,4 @@
-<?php include('view/header.php') ?>
+<?php include('header.php') ?>
 <h1>Login</h1>
 <hr>
 
@@ -13,4 +13,5 @@
 </form>
 
 
-<?php include('view/footer.php') ?>
+<?php include('footer.php') ?>
+<!-- kenapa ini gaperlu view/footer.php ? -->
