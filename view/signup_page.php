@@ -1,3 +1,4 @@
+<!-- halaman pertama. (diarahkan index) -->
 <?php include('view/header.php') ?>
 <h1>Sign Up</h1>
 <hr>
@@ -14,6 +15,13 @@
     
     <label for="">Re-enter Password:</label>
     <input type="password" name="pass">
+
+    
+    <input type="button" value="Confirm">
     
 </form>
+<a href="view/login_page.php">Already have an account?</a>
+
+
+
 <?php include('view/footer.php') ?>
