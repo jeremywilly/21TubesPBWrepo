@@ -4,7 +4,7 @@ class database
     var $host = "localhost";
     var $username = "root";
     var $password = "";
-    var $database = "jobfinder";
+    var $database = "delivery";
     var $koneksi;
 
     function __construct()
@@ -13,9 +13,9 @@ class database
     }
 
 
-    function register($username, $password, $email, $location, $no, $birthdate ,$Degree ,$University ,$Bio)
+    function register($username, $password, )
     {
-        $insert = mysqli_query($this->koneksi, "insert into users values ('$username','$password','$email','$location','$no','$birthdate','$Degree','$University','$Bio')");
+        $insert = mysqli_query($this->koneksi, "insert into users values ('$username','$password')");
         return $insert;
     }
 
@@ -48,19 +48,11 @@ class database
     }
 
 
-    function postJob($title, $company, $jobLocation, $employmentTipe, $pictureJob)
+    function pengiriman($namaBarang, $kategori, $jumlah, $tipePengiriman)
     {
-        $insert = mysqli_query($this->koneksi, "insert into datajob values ('$title','$company','$jobLocation','$employmentTipe','$pictureJob')");
+        $insert = mysqli_query($this->koneksi, "insert into datajob values ('$namaBaran','$kategori','$jumlah','$tipePengiriman')");
         return $insert;
     }
 
-    function deleteAccount($username, $password)
-    {
-        $query = mysqli_query($this->koneksi, "select * from tb_user where email='$username'");
-        $data_user = $query->fetch_array();
-        if (password_verify($password, $data_user['password'])) {
-            $del = mysqli_query($this->koneksi, "delete from tb_user where email='$username'");
-            return $del;
-        }
-    }
+    
 }
