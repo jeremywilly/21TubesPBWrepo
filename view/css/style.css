@@ -37,3 +37,32 @@ h1{
 .container.cont_pengiriman .pengiriman{
     border: gray solid 1px;
 }
+
+
+
+
+/* buat home */
+/* dari w3-school */
+.navbar {
+    background-color: #607d8b;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    color: #000000cc;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar a.aktif {
+    background-color: #2d3c8c85;
+    color: white;
+}
