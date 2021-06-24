@@ -1,4 +1,4 @@
-<?php include('header.php') ?>
+<?php include('header.php'); //blm pakai layout ?>
 <h1>Login</h1>
 <hr>
 
@@ -13,5 +13,5 @@
 </form>
 
 
-<?php include('footer.php') ?>
+<?php include('footer.php'); ?>
 <!-- kenapa ini gaperlu view/footer.php ? -->
