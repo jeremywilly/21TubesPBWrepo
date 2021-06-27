@@ -1,3 +1,4 @@
+<!-- jd pakai layout aja -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
