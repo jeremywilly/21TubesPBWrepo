@@ -6,7 +6,11 @@ class UserController {
     protected $db;
 
     public function __construct() {
-        $this->db = new MySQLDB("localhost", "root", "", "ide");
+        $this->db = new MySQLDB("localhost", "root", "", "delivery");
+    }
+
+    public function view_home() {
+        return View::createViewHome('home.php');
     }
 
     public function view_user() {

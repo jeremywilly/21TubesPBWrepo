@@ -41,6 +41,6 @@ class MySQLDB{
 	}
 }
 
-$db = new MySQLDB("localhost","root","","ide"); //diinisialisasi objek db nya
-
+$db = new MySQLDB("localhost","root","","delivery"); //diinisialisasi objek db nya
+//										atau nama lain sesuain								
 ?>
