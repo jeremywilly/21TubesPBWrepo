@@ -15,7 +15,7 @@ class View
     }
 
     public static function createViewCheck($view, $condition) {      //gaperlu param?
-        $conditions = array();
+        $conditions = array();//isi segala kondisi yg salah
 
         if($condition == "invalid email") {     //blm bisa nyimpan lebi dari 1
             // $conditions[0] = 'invalidemail';

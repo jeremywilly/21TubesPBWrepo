@@ -3,7 +3,7 @@
 <!-- Navbar -->
 
 <div>
-    <div class="w3-bar w3-card">
+    <div class="w3-bar w3-card w3-dark-grey">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
         <!-- <a href="Home" class="w3-bar-item w3-button w3-padding-large">HOME</a> -->
         <a href="assigndriver" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Assign Drivers</a>
@@ -16,8 +16,8 @@
                 <a href="logout.php" class="w3-bar-item w3-button">Log Out</a>
             </div>
         </div> -->
-        <a href="login_page.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Log in</a>
-        <a href="signup_page.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Sign up</a>
+        <a href="login" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Log in</a>
+        <a href="signup" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Sign up</a>
     </div>
 </div>
 

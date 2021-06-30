@@ -87,8 +87,29 @@ class MySQLDB{
 		}
 	}
 
-	public function checkAccount() {
+	public function checkAccount($emailLogin, $passLogin) {
+
+
+		$sql_check = "SELECT * FROM user WHERE email = '$emailLogin' AND password = '$passLogin'"; // LIMIT 1";
 		
+		$this->openConnection();
+
+		$result = $this->db_connection->query($sql_check);
+
+		// pake mysql_num_rows()
+		if(mysql_num_rows($result) > 0 )	//kl ada
+        { 
+            // $_SESSION["logged_in"] = true; 
+            // $_SESSION["naam"] = $emailLogin; 
+			return TRUE;
+        }
+        else
+        {
+            //echo 'The username or password are incorrect!';
+			return FALSE;
+        }
+
+		$this->closeConnection();
 	}
 }
 

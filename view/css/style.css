@@ -3,10 +3,10 @@ body {
 }
 
 h1{
-    color: orange;
+    color: white;
 }
 
-
+/* 
 .container{
     display: flex;
 }
@@ -42,7 +42,7 @@ h1{
 .container.cont_pengiriman .pengiriman{
     border: gray solid 1px;
 } 
-
+ */
 
 
 

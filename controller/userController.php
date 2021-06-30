@@ -81,7 +81,7 @@ class UserController {
         $condition ="";
 
         //validate
-        if( !checkAccount($email, $pass) ) {    
+        if( !$this->db->checkAccount($email, $pass) ) {    
 
             $condition ="invalid email or password";
             return View::createViewCheck('login_page.php', $condition);

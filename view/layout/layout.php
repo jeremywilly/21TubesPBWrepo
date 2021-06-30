@@ -4,7 +4,7 @@
     <!-- <title>Document</title> -->
 
     <!-- <link rel="stylesheet" type="text/css" href="/kul/tubes/21TubesPBWrepo/view/css/style.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="view/css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="view/css/style.css">
     
 
     <!-- dari assign -->
