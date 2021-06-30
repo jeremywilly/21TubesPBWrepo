@@ -48,6 +48,18 @@
 
     <p><a href="signup">Don't have an account?</a></p>
   </div>
+
+  <?php
+  foreach($conditions as $cond) {
+      if( $cond == "wrong email or password") {
+          echo "<p style='color: red;'>Wrong e-mail or password!</p>";
+      }   
+  }
+  if( empty($conditions) || count($conditions)==0) {       
+      // exit();      //jgn nanti css gakebaca
+      //do nothing
+  }
+  ?>
 </div>
 
 
@@ -57,13 +69,3 @@
 <!-- <php include('footer.php'); ?> -->
 <!-- kenapa ini gaperlu view/footer.php ? -->
 
-<?php
-foreach($conditions as $cond) {
-    if( $cond == "wrong email or password") {
-        echo "<p style='color: red;'>Wrong e-mail or password!</p>";
-    }   
-}
-if( empty($conditions) || count($conditions)==0) {       
-    // exit();      //jgn nanti css gakebaca
-    //do nothing
-}?>

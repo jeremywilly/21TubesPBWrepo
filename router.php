@@ -15,6 +15,11 @@
                 $userCtrl = new UserController();
                 echo $userCtrl->view_home();
                 break;
+            case $baseURL.'/home_logged':                       //ke assign
+                require_once "controller/userController.php";
+                $userCtrl = new UserController();
+                echo $userCtrl->view_home_logged();
+                break;
             case $baseURL.'/login':
                 require_once "controller/userController.php";
                 $userCtrl = new UserController();
