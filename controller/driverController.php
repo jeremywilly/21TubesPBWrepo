@@ -21,7 +21,7 @@ class DriverController {
     public function view_drivers_logged() {            
         $result = $this->getAllDriver();     
         
-        return View::createView('AssignDriver.php',
+        return View::createView('AssignDriver_logged.php',
         [
             "result" => $result
         ]); 

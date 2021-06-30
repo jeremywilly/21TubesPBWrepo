@@ -9,7 +9,7 @@
         <a href="assigndriver_logged" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Assign Drivers</a>
         <a href="Job.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TRACK</a>
         <a href="PostJob.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small">KIRIM</a>
-        <a href="logout.php" class="w3-bar-item w3-button w3-right">Log Out</a>
+        <a href="home" class="w3-bar-item w3-button w3-right">Log Out</a>
         <!-- Perlu ditambah alert untuk tombol logout atau pindahkan tombol profile ke kiri navbar!  -->
         <a href="profile.php" class="w3-bar-item w3-button w3-right">Profile</a>
     </div>

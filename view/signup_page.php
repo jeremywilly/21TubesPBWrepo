@@ -44,6 +44,26 @@
         <p><a href="login">Already have an account?</a></p> 
         <!-- perlu p? -->
     </div>
+    
+    <?php
+    //awal dulu biar dicek berisi atau engga
+    if( empty($conditions) || count($conditions)==0) { //cukup 1 atau engga?
+        // exit();      //jgn nanti css gakebaca
+        //do nothing
+    }else{
+        foreach($conditions as $cond) {
+            if( $cond == "email") {
+                echo "<p style='color: red;'>You used an invalid e-mail!</p>";
+            }   
+            if( $cond == "password") {
+                echo "<p style='color: red;'>Your password doesn't match!</p>";
+            }  
+            if( $cond == "same") {
+                echo "<p style='color: red;'>Somebody already used that email !</p>";
+            }   
+        }
+    }
+    ?>
 </div>
 
 <?php
@@ -69,22 +89,20 @@
 // }
 
 //awal dulu biar dicek berisi atau engga
-if( empty($conditions) || count($conditions)==0) { //cukup 1 atau engga?
-    // exit();      //jgn nanti css gakebaca
-    //do nothing
-}else{
-    foreach($conditions as $cond) {
-        if( $cond == "email") {
-            echo "<p style='color: red;'>You used an invalid e-mail!</p>";
-        }   
-        if( $cond == "password") {
-            echo "<p style='color: red;'>Your password doesn't match!</p>";
-        }  
-        if( $cond == "same") {
-            echo "<p style='color: red;'>Somebody already used that email !</p>";
-        }   
-    }
-}
-
-
+// if( empty($conditions) || count($conditions)==0) { //cukup 1 atau engga?
+//     // exit();      //jgn nanti css gakebaca
+//     //do nothing
+// }else{
+//     foreach($conditions as $cond) {
+//         if( $cond == "email") {
+//             echo "<p style='color: red;'>You used an invalid e-mail!</p>";
+//         }   
+//         if( $cond == "password") {
+//             echo "<p style='color: red;'>Your password doesn't match!</p>";
+//         }  
+//         if( $cond == "same") {
+//             echo "<p style='color: red;'>Somebody already used that email !</p>";
+//         }   
+//     }
+// }
 ?>
