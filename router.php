@@ -15,6 +15,20 @@
                 $userCtrl = new UserController();
                 echo $userCtrl->view_home();
                 break;
+            case $baseURL.'/login':
+                require_once "controller/userController.php";
+                $userCtrl = new UserController();
+                echo $userCtrl->view_login_page();
+                break;
+            case $baseURL.'/signup':
+                require_once "controller/userController.php";
+                $userCtrl = new UserController();
+                echo $userCtrl->view_signup_page();
+                break;
+            case $baseURL.'/signup-check':
+                require_once "controller/userController.php";
+                $userCtrl = new UserController();
+                echo $userCtrl->signup();
             case $baseURL.'/assigndriver':                       //ke assign
                 require_once "controller/driverController.php";
                 $driverCtrl = new DriverController();
@@ -31,6 +45,19 @@
                 // $userCtrl = new UserControLLer();
                 // $userCtrl->add();        //gaperlu
                 // header('Location: Home');
+                break;
+            case $baseURL.'/signup-check':
+                require_once "controller/userController.php";
+                $userCtrl = new UserController();
+                echo $userCtrl->signup();
+            case $baseURL.'/login-check':
+                require_once "controller/userController.php";
+                $userCtrl = new UserController();
+                echo $userCtrl->login();
+            case $baseURL.'/login':
+                require_once "controller/userController.php";
+                $driverCtrl = new UserController();
+                //echo $driverCtrl->view_login_page();
                 break;
             case $baseURL.'/assigndriver':
                 require_once "controller/driverController.php";

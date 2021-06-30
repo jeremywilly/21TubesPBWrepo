@@ -3,21 +3,15 @@
 <!-- Navbar -->
 
 <div>
-    <div class="w3-bar w3-card">
+    <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
         <!-- <a href="Home" class="w3-bar-item w3-button w3-padding-large">HOME</a> -->
         <a href="assigndriver" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Assign Drivers</a>
         <a href="Job.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TRACK</a>
         <a href="PostJob.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small">KIRIM</a>
-        <!-- <div class="w3-dropdown-hover w3-hide-small">
-            <button class="w3-padding-large w3-button" title="More"><i class="fa fa-caret-down"></i></button>
-            <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                <a href="profile.php" class="w3-bar-item w3-button">Profile</a>
-                <a href="logout.php" class="w3-bar-item w3-button">Log Out</a>
-            </div>
-        </div> -->
-        <a href="login_page.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Log in</a>
-        <a href="signup_page.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Sign up</a>
+        <a href="logout.php" class="w3-bar-item w3-button w3-right">Log Out</a>
+        <!-- Perlu ditambah alert untuk tombol logout atau pindahkan tombol profile ke kiri navbar!  -->
+        <a href="profile.php" class="w3-bar-item w3-button w3-right">Profile</a>
     </div>
 </div>
 

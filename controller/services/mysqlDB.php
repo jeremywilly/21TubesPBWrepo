@@ -36,7 +36,58 @@ class MySQLDB{
 		$this->db_connection->close();
 	}
 
-	public function escapeString() {
+	public function escapeString($inputString) {
+		$this->openConnection();
+		$escapedString = $this->db_connection->real_escape_string($inputString);
+		$this->closeConnection();
+		return $escapedString;
+	}
+
+	public function prepareStmt($sql) {
+		$this->openConnection();
+		$preparedStmt = $this->db_connection->prepare($sql);
+		$this->closeConnection();
+		return $preparedStmt;
+	}
+
+	public function prepareandExecute($nameP, $emailP, $passP) {
+		$this->openConnection();
+		$sql = " INSERT INTO user (
+			name, email, password
+			)
+		VALUES (
+			?, ?, ?       
+		); "; 
+
+		$prepared_stmt = $this->db_connection->prepare($sql);
+		$prepared_stmt->bind_param("sss", $nameP, $emailP, $passP);
+		$prepared_stmt->execute();
+
+		// $result = $prepared_stmt->get_result();
+
+		$prepared_stmt->close();
+
+		$this->closeConnection();
+	}
+
+	public function sameEmail($emailP) {
+		$sql_check = "SELECT * FROM user WHERE email = '$emailP'"; // LIMIT 1";
+
+		$this->openConnection();
+
+		$result = $this->db_connection->query($sql_check);
+		$row = mysqli_fetch_assoc($result); //expected mysqli_result, instead bool
+		if ($emailP == $row['email']) {		//mysqli_num_rows($result) > 0
+			$this->closeConnection();
+			return TRUE; //udh ada
+		}
+		else {
+			$this->closeConnection();
+			return FALSE;
+		}
+	}
+
+	public function checkAccount() {
 		
 	}
 }
