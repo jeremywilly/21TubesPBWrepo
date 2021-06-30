@@ -16,7 +16,16 @@ class DriverController {
         [
             "result" => $result
         ]); //buat view enfine, untuk liat smua driver
-    }          
+    }     
+    
+    public function view_drivers_logged() {            
+        $result = $this->getAllDriver();     
+        
+        return View::createView('AssignDriver.php',
+        [
+            "result" => $result
+        ]); 
+    }    
 
     public function getAllDriver () {               //semua , nama aja
         $query = "SELECT name FROM drivers";

@@ -1,7 +1,12 @@
-h1{
-    text-align: center;
+body {
+    background-color: blue;
 }
 
+h1{
+    color: white;
+}
+
+/* 
 .container{
     display: flex;
 }
@@ -36,13 +41,14 @@ h1{
 
 .container.cont_pengiriman .pengiriman{
     border: gray solid 1px;
-}
-
+} 
+ */
 
 
 
 /* buat home */
 /* dari w3-school */
+/* 
 .navbar {
     background-color: #607d8b;
     overflow: hidden;
@@ -65,4 +71,4 @@ h1{
 .navbar a.aktif {
     background-color: #2d3c8c85;
     color: white;
-}
+} */
