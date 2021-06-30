@@ -90,26 +90,42 @@ class MySQLDB{
 	public function checkAccount($emailLogin, $passLogin) {
 
 
-		$sql_check = "SELECT * FROM user WHERE email = '$emailLogin' AND password = '$passLogin'"; // LIMIT 1";
+		// $sql_check = "SELECT * FROM user WHERE email = '$emailLogin' AND password = '$passLogin'"; // LIMIT 1";
+		$sql_check = "SELECT * FROM user WHERE email = '$emailLogin'"; // LIMIT 1";
 		
 		$this->openConnection();
 
 		$result = $this->db_connection->query($sql_check);
+		$data_customers = $result->fetch_array();	//diambil berupa array
 
-		// pake mysql_num_rows()
-		if(mysql_num_rows($result) > 0 )	//kl ada
-        { 
-            // $_SESSION["logged_in"] = true; 
-            // $_SESSION["naam"] = $emailLogin; 
+		if (isset($data_customers) && $data_customers['password'] === $passLogin) {
+            // $_SESSION['username'] = $username;
+            // $_SESSION['is_login'] = TRUE;
+            $this->closeConnection();
 			return TRUE;
-        }
-        else
+        }else
         {
             //echo 'The username or password are incorrect!';
+			$this->closeConnection();
 			return FALSE;
-        }
+		}
 
-		$this->closeConnection();
+		// pake mysql_num_rows()
+		// if( mysql_num_rows($result) > 0 )	//kl ada
+        // { 
+        //     // $_SESSION["logged_in"] = true; 
+        //     // $_SESSION["naam"] = $emailLogin; 
+		// 	$this->closeConnection();
+		// 	return TRUE;
+        // }
+        // else
+        // {
+        //     //echo 'The username or password are incorrect!';
+		// 	$this->closeConnection();
+		// 	return FALSE;
+        // }
+
+		// $this->closeConnection();
 	}
 }
 
